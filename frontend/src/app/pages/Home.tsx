@@ -137,7 +137,7 @@ export function Home() {
     <div className="w-full">
       {/* Hero Section */}
       <section
-        className="relative h-screen flex items-center justify-center text-white"
+        className="relative min-h-[80vh] lg:h-screen flex items-center justify-center text-white"
         style={{
           backgroundImage:
             'linear-gradient(rgba(15, 23, 42, 0.85), rgba(6, 78, 118, 0.75)), url(https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyJTIwc2VydmVycyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzcxOTk4Njk2fDA&ixlib=rb-4.1.0&q=80&w=1080)',
@@ -145,19 +145,20 @@ export function Home() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="max-w-[1280px] mx-auto px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="mb-6 text-3xl font-bold leading-tight sm:text-4xl lg:text-6xl">
             Soluciones integrales IT para
-            <br />
+            <br className="hidden sm:block" />
+            <span className="sm:hidden"> </span>
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Empresas y Corporaciones
             </span>
           </h1>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="mx-auto mb-8 max-w-3xl text-base leading-relaxed text-gray-200 sm:text-xl">
             Impulsamos centros de datos, infraestructura IT, digitalización y automatización para
             operar con seguridad, continuidad y escalabilidad.
           </p>
-          <div className="flex items-center justify-center gap-4 mb-10">
+          <div className="mb-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2 text-sm backdrop-blur-sm">
               25 años de experiencia
             </Badge>
@@ -168,14 +169,14 @@ export function Home() {
               Soporte especializado
             </Badge>
           </div>
-          <div className="flex items-center justify-center gap-4">
-            <Link to="/contacto">
-              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-lg px-8 py-6">
+          <div className="flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+            <Link to="/contacto" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-5 text-base hover:from-cyan-600 hover:to-blue-700 sm:w-auto sm:px-8 sm:py-6 sm:text-lg">
                 Solicitar diagnóstico
               </Button>
             </Link>
-            <Link to="/soluciones">
-              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 text-lg px-8 py-6">
+            <Link to="/soluciones" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full border-white/30 bg-white/10 px-6 py-5 text-base text-white backdrop-blur-sm hover:bg-white/20 sm:w-auto sm:px-8 sm:py-6 sm:text-lg">
                 Ver soluciones
               </Button>
             </Link>
@@ -185,15 +186,15 @@ export function Home() {
 
       {/* Qué hacemos */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1280px] mx-auto px-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Qué hacemos</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Qué hacemos</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Soluciones tecnológicas integrales para impulsar su negocio
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicios.map((servicio, index) => {
               const Icon = servicio.icon;
               return (
@@ -219,15 +220,15 @@ export function Home() {
 
       {/* Requerimientos frecuentes */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[1280px] mx-auto px-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Requerimientos frecuentes</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Requerimientos frecuentes</h2>
             <p className="text-xl text-gray-600">
               Soluciones que nuestros clientes corporativos necesitan
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {requerimientos.map((req, index) => (
               <div key={index} className="flex items-start gap-3 bg-white p-5 rounded-lg shadow-sm">
                 <CheckCircle2 className="w-6 h-6 text-cyan-600 flex-shrink-0 mt-0.5" />
@@ -240,15 +241,15 @@ export function Home() {
 
       {/* Por qué INCOMSAT */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1280px] mx-auto px-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Por qué INCOMSAT</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Por qué INCOMSAT</h2>
             <p className="text-xl text-gray-600">
               Su socio estratégico en transformación digital
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {diferenciadores.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -267,15 +268,15 @@ export function Home() {
 
       {/* Casos de éxito preview */}
       <section className="py-24 bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-900 text-white">
-        <div className="max-w-[1280px] mx-auto px-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Casos de Éxito</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Casos de Éxito</h2>
             <p className="text-xl text-gray-200">
               Más de 40 empresas líderes confían en INCOMSAT
             </p>
           </div>
 
-          <div className="grid grid-cols-5 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
             {sectores.map((sector, index) => (
               <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 p-6 text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{sector.count}</div>
@@ -297,15 +298,15 @@ export function Home() {
 
       {/* Marcas que distribuimos preview */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[1280px] mx-auto px-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Marcas que distribuimos</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Marcas que distribuimos</h2>
             <p className="text-xl text-gray-600">
               Aliados estratégicos con las mejores marcas tecnológicas
             </p>
           </div>
 
-          <div className="grid grid-cols-6 gap-8 items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
             {marcasPreview.map((marca, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center h-28">
                 <div className="w-full h-14 flex items-center justify-center overflow-hidden">
@@ -332,12 +333,12 @@ export function Home() {
 
       {/* CTA Final */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-cyan-600 text-white">
-        <div className="max-w-[1280px] mx-auto px-8 text-center">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">¿Listo para transformar su infraestructura IT?</h2>
           <p className="text-xl text-gray-100 mb-8">
             Solicite un diagnóstico gratuito y descubra cómo podemos impulsar su negocio
           </p>
-          <Link to="/contacto">
+          <Link to="/contacto" className="w-full sm:w-auto">
             <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
               Solicitar diagnóstico gratuito
             </Button>
@@ -347,3 +348,6 @@ export function Home() {
     </div>
   );
 }
+
+
+

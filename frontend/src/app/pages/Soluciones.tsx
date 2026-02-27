@@ -139,8 +139,8 @@ export function Soluciones() {
     <div className="w-full">
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-900 text-white py-24">
-        <div className="max-w-[1280px] mx-auto px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Soluciones de Alta Tecnología</h1>
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Soluciones de Alta Tecnología</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Consultoría, infraestructura IT, seguridad, soporte y proyectos integrales para
             empresas y corporaciones.
@@ -150,7 +150,7 @@ export function Soluciones() {
 
       {/* Soluciones Grid */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1280px] mx-auto px-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {soluciones.map((solucion, index) => {
               const Icon = solucion.icon;
@@ -158,8 +158,8 @@ export function Soluciones() {
 
               return (
                 <Card key={index} className="overflow-hidden border-2 hover:border-cyan-200 transition-all">
-                  <div className={`grid grid-cols-2 ${isEven ? '' : 'grid-flow-dense'}`}>
-                    <div className={`p-10 flex flex-col justify-center ${isEven ? '' : 'col-start-2'}`}>
+                  <div className={`grid grid-cols-1 lg:grid-cols-2 ${isEven ? '' : 'lg:grid-flow-dense'}`}>
+                    <div className={`p-6 sm:p-8 lg:p-10 flex flex-col justify-center ${isEven ? '' : 'lg:col-start-2'}`}>
                       <div className="w-16 h-16 bg-gradient-to-br from-blue-900 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
                         <Icon className="w-8 h-8 text-white" />
                       </div>
@@ -172,7 +172,7 @@ export function Soluciones() {
                           </li>
                         ))}
                       </ul>
-                      <div className="flex gap-4">
+                      <div className="flex flex-col sm:flex-row gap-4">
                         <Link to="/contacto">
                           <Button className="bg-gradient-to-r from-blue-900 to-cyan-600 hover:from-blue-800 hover:to-cyan-500">
                             Pedir cotización
@@ -187,7 +187,7 @@ export function Soluciones() {
                       </div>
                     </div>
                     <div
-                      className={`h-full min-h-[400px] bg-cover bg-center ${isEven ? '' : 'col-start-1 row-start-1'}`}
+                      className={`h-full min-h-[260px] sm:min-h-[320px] lg:min-h-[400px] bg-cover bg-center ${isEven ? '' : 'lg:col-start-1 lg:row-start-1'}`}
                       style={{ backgroundImage: `url(${solucion.image})` }}
                     />
                   </div>
@@ -200,19 +200,19 @@ export function Soluciones() {
 
       {/* Cómo trabajamos */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[1280px] mx-auto px-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Cómo trabajamos</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Cómo trabajamos</h2>
             <p className="text-xl text-gray-600">
               Proceso estructurado para garantizar el éxito de su proyecto
             </p>
           </div>
 
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {pasos.map((paso, index) => (
               <div key={index} className="relative">
                 <div className="bg-white p-8 rounded-lg shadow-sm h-full border-2 border-gray-100 hover:border-cyan-200 transition-all">
-                  <div className="text-5xl font-bold text-cyan-600 mb-4 opacity-50">{paso.numero}</div>
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cyan-600 mb-4 opacity-50">{paso.numero}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{paso.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{paso.description}</p>
                 </div>
@@ -229,7 +229,7 @@ export function Soluciones() {
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-cyan-600 text-white">
-        <div className="max-w-[1280px] mx-auto px-8 text-center">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">¿Necesita una solución personalizada?</h2>
           <p className="text-xl text-gray-100 mb-8">
             Nuestro equipo está listo para diseñar la solución que su empresa necesita
@@ -244,3 +244,5 @@ export function Soluciones() {
     </div>
   );
 }
+
+

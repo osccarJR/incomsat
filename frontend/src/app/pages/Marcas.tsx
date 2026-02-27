@@ -71,11 +71,11 @@ export function Marcas() {
     <div className="w-full">
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-900 text-white py-24">
-        <div className="max-w-[1280px] mx-auto px-8 text-center">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center mb-6">
             <Award className="w-16 h-16 text-cyan-400" />
           </div>
-          <h1 className="text-5xl font-bold mb-6">Marcas que distribuimos</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Marcas que distribuimos</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Aliados estratégicos con las mejores marcas tecnológicas del mundo para garantizar
             soluciones de clase empresarial
@@ -85,7 +85,7 @@ export function Marcas() {
 
       {/* Grid de marcas */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1280px] mx-auto px-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Distribuidores oficiales de tecnología de clase mundial
@@ -95,7 +95,7 @@ export function Marcas() {
             </p>
           </div>
 
-          <div className="grid grid-cols-5 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
             {marcas.map((marca, index) => (
               <Card
                 key={index}
@@ -122,7 +122,7 @@ export function Marcas() {
 
       {/* Categorías */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[1280px] mx-auto px-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Marcas por categoría</h2>
             <p className="text-lg text-gray-600">
@@ -130,7 +130,7 @@ export function Marcas() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {categorias.map((categoria, index) => (
               <Card key={index} className="p-8 border-2 hover:border-cyan-200 transition-all">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{categoria.title}</h3>
@@ -152,7 +152,7 @@ export function Marcas() {
 
       {/* Beneficios */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1280px] mx-auto px-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Por qué comprar con INCOMSAT
@@ -162,7 +162,7 @@ export function Marcas() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {beneficios.map((beneficio, index) => (
               <div key={index} className="flex items-start gap-3 bg-gray-50 p-6 rounded-lg">
                 <CheckCircle2 className="w-6 h-6 text-cyan-600 flex-shrink-0 mt-0.5" />
@@ -175,7 +175,7 @@ export function Marcas() {
 
       {/* Certificaciones */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div className="max-w-[1280px] mx-auto px-8 text-center">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white p-12 rounded-2xl shadow-sm border-2 border-gray-200">
             <Award className="w-16 h-16 text-cyan-600 mx-auto mb-6" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -196,7 +196,7 @@ export function Marcas() {
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-cyan-600 text-white">
-        <div className="max-w-[1280px] mx-auto px-8 text-center">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">¿Necesita equipos o soluciones específicas?</h2>
           <p className="text-xl text-gray-100 mb-8">
             Cotice con nosotros y acceda a la mejor tecnología con soporte profesional
@@ -211,3 +211,5 @@ export function Marcas() {
     </div>
   );
 }
+
+
