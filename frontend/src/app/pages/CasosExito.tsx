@@ -111,8 +111,8 @@ export function CasosExito() {
   return (
     <div className="w-full">
       <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-900 py-24 text-white">
-        <div className="mx-auto max-w-[1280px] px-8 text-center">
-          <h1 className="mb-6 text-5xl font-bold">Casos de Exito</h1>
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold">Casos de Exito</h1>
           <p className="mx-auto max-w-3xl text-xl text-gray-200">
             Mas de 40 empresas lideres en Ecuador confian en INCOMSAT para sus soluciones IT
           </p>
@@ -120,17 +120,17 @@ export function CasosExito() {
       </section>
 
       <section className="sticky top-20 z-40 border-b bg-white shadow-sm">
-        <div className="mx-auto max-w-[1280px] px-8 py-6">
-          <div className="flex items-center gap-3">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <span className="text-sm font-medium text-gray-700">Filtrar por sector:</span>
-            <div className="flex gap-2">
+            <div className="flex gap-2 overflow-x-auto pb-1">
               {sectores.map((sector) => (
                 <Button
                   key={sector.id}
                   variant={filtroActivo === sector.id ? 'default' : 'outline'}
                   size="sm"
                   onClick={() => setFiltroActivo(sector.id)}
-                  className={filtroActivo === sector.id ? 'bg-gradient-to-r from-blue-900 to-cyan-600' : ''}
+                  className={`shrink-0 ${filtroActivo === sector.id ? 'bg-gradient-to-r from-blue-900 to-cyan-600' : ''}`}
                 >
                   {sector.nombre}
                 </Button>
@@ -141,7 +141,7 @@ export function CasosExito() {
       </section>
 
       <section className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-[1280px] px-8">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <p className="text-gray-600">
               Mostrando <span className="font-semibold text-gray-900">{casosFiltrados.length}</span>{' '}
@@ -149,7 +149,7 @@ export function CasosExito() {
             </p>
           </div>
 
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {casosFiltrados.map((caso, index) => (
               <div
                 key={index}
@@ -181,22 +181,22 @@ export function CasosExito() {
       </section>
 
       <section className="bg-white py-20">
-        <div className="mx-auto max-w-[1280px] px-8">
-          <div className="grid grid-cols-4 gap-8">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="mb-2 text-5xl font-bold text-cyan-600">40+</div>
+              <div className="mb-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-cyan-600">40+</div>
               <div className="text-gray-600">Clientes corporativos</div>
             </div>
             <div className="text-center">
-              <div className="mb-2 text-5xl font-bold text-cyan-600">25</div>
+              <div className="mb-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-cyan-600">25</div>
               <div className="text-gray-600">Anos de experiencia</div>
             </div>
             <div className="text-center">
-              <div className="mb-2 text-5xl font-bold text-cyan-600">5</div>
+              <div className="mb-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-cyan-600">5</div>
               <div className="text-gray-600">Sectores industriales</div>
             </div>
             <div className="text-center">
-              <div className="mb-2 text-5xl font-bold text-cyan-600">100+</div>
+              <div className="mb-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-cyan-600">100+</div>
               <div className="text-gray-600">Proyectos implementados</div>
             </div>
           </div>
@@ -204,7 +204,7 @@ export function CasosExito() {
       </section>
 
       <section className="bg-gradient-to-r from-blue-900 to-cyan-600 py-20 text-white">
-        <div className="mx-auto max-w-[1280px] px-8 text-center">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="mb-4 text-3xl font-bold">Quieres ser nuestro proximo caso de exito?</h2>
           <p className="mb-8 text-xl text-gray-100">
             Cuentanos sobre su proyecto y descubra como podemos ayudarle
@@ -219,3 +219,5 @@ export function CasosExito() {
     </div>
   );
 }
+
+

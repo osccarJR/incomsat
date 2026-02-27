@@ -42,18 +42,27 @@ export function Contacto() {
     'Otro / Consulta general',
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setEnviando(true);
 
-    // Simulación de envío
-    setTimeout(() => {
-      setEnviando(false);
-      toast.success('¡Solicitud enviada!', {
-        description: 'Nuestro equipo se pondrá en contacto en 24-48 horas hábiles.',
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
 
-      // Reset form
+      if (!response.ok) {
+        throw new Error('No se pudo enviar el formulario');
+      }
+
+      toast.success('Solicitud enviada', {
+        description: 'Nuestro equipo se pondra en contacto en 24-48 horas habiles.',
+      });
+
       setFormData({
         nombre: '',
         empresa: '',
@@ -64,7 +73,13 @@ export function Contacto() {
         mensaje: '',
         diagnostico: false,
       });
-    }, 1500);
+    } catch {
+      toast.error('No se pudo enviar la solicitud', {
+        description: 'Intente nuevamente en unos minutos.',
+      });
+    } finally {
+      setEnviando(false);
+    }
   };
 
   const handleChange = (field: string, value: string | boolean) => {
@@ -77,8 +92,8 @@ export function Contacto() {
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-900 text-white py-24">
-        <div className="max-w-[1280px] mx-auto px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Contáctenos</h1>
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Contáctenos</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             INCOMSAT – Su socio estratégico para innovar, escalar y construir Soluciones IT
             seguras, inteligentes y sostenibles
@@ -88,8 +103,8 @@ export function Contacto() {
 
       {/* Información de contacto */}
       <section className="py-16 bg-white border-b">
-        <div className="max-w-[1280px] mx-auto px-8">
-          <div className="grid grid-cols-3 gap-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Quito */}
             <Card className="p-8 border-2 hover:border-cyan-200 transition-all text-center">
               <MapPin className="w-12 h-12 text-cyan-600 mx-auto mb-4" />
@@ -153,10 +168,10 @@ export function Contacto() {
 
       {/* Formulario */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[1280px] mx-auto px-8">
-          <div className="grid grid-cols-5 gap-12">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12">
             {/* Columna izquierda - Info */}
-            <div className="col-span-2">
+            <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Solicite información</h2>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                 Complete el formulario y nuestro equipo de especialistas se pondrá en contacto con
@@ -189,10 +204,10 @@ export function Contacto() {
             </div>
 
             {/* Columna derecha - Formulario */}
-            <div className="col-span-3">
+            <div className="lg:col-span-3">
               <Card className="p-8 border-2">
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="nombre">Nombre completo *</Label>
                       <Input
@@ -215,7 +230,7 @@ export function Contacto() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="cargo">Cargo</Label>
                       <Input
@@ -337,3 +352,6 @@ export function Contacto() {
     </div>
   );
 }
+
+
+
