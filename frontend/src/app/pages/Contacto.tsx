@@ -121,7 +121,7 @@ export function Contacto() {
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="w-4 h-4 text-gray-500" />
-                  <span className="text-gray-600">+593 (2) XXX-XXXX</span>
+                  <span className="text-gray-600">+593 0999104889</span>
                 </div>
               </div>
             </Card>
@@ -134,15 +134,15 @@ export function Contacto() {
                 <div className="flex items-center justify-center gap-2">
                   <Mail className="w-4 h-4 text-gray-500" />
                   <a
-                    href="mailto:infosas@incomsat.net"
+                    href="mailto:info@incomsat.net"
                     className="text-cyan-600 hover:text-cyan-700 font-medium"
                   >
-                    infosas@incomsat.net
+                    info@incomsat.net
                   </a>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="w-4 h-4 text-gray-500" />
-                  <span className="text-gray-600">+593 (4) XXX-XXXX</span>
+                  <span className="text-gray-600">+593 0999104889</span>
                 </div>
               </div>
             </Card>
@@ -247,7 +247,7 @@ export function Contacto() {
                         type="tel"
                         value={formData.telefono}
                         onChange={(e) => handleChange('telefono', e.target.value)}
-                        placeholder="+593 999 999 999"
+                        placeholder="+593 0999104889"
                         required
                       />
                     </div>

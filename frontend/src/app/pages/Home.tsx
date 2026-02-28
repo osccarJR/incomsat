@@ -1,7 +1,6 @@
 import { Link } from 'react-router';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
 import {
   Server,
   Network,
@@ -16,6 +15,7 @@ import {
   Building2,
   TrendingUp,
 } from 'lucide-react';
+import { motion } from 'motion/react';
 import apcLogo from '../../assets/apc.png';
 import arubaLogo from '../../assets/aruba.png';
 import ciscoLogo from '../../assets/cisco.png';
@@ -28,85 +28,100 @@ import microsoftLogo from '../../assets/microsoft.png';
 import panduitLogo from '../../assets/PANDUIT.png';
 import siemonLogo from '../../assets/siemon.png';
 import vertivLogo from '../../assets/vertiv.png';
+import heroVideo from '../../assets/hero.mp4';
+import buildingsBg from '../../assets/buildings.jpg';
 
 export function Home() {
+  const fadeUp = {
+    initial: { opacity: 0, y: 14 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.2 },
+    transition: { duration: 0.38, ease: 'easeOut' as const },
+  };
+
+  const fadeItem = {
+    initial: { opacity: 0, y: 10 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.2 },
+    transition: { duration: 0.3, ease: 'easeOut' as const },
+  };
+
   const servicios = [
     {
-      icon: Server,
-      title: 'Infraestructura & Data Center',
-      description: 'Diseño, implementación y gestión de centros de datos con los más altos estándares',
-      link: '/soluciones',
-    },
-    {
       icon: Network,
-      title: 'Redes & Conectividad',
-      description: 'Soluciones LAN/WAN, cableado estructurado cobre y fibra óptica',
-      link: '/soluciones',
-    },
-    {
-      icon: Shield,
-      title: 'Seguridad Electrónica',
-      description: 'CCTV, control de acceso, alarmas y monitoreo integrado',
-      link: '/soluciones',
-    },
-    {
-      icon: Headset,
-      title: 'Soporte & Help Desk',
-      description: 'Mesa de ayuda 24/7, mantenimiento preventivo y correctivo',
-      link: '/soluciones',
-    },
-    {
-      icon: Zap,
-      title: 'Sistemas Eléctricos & Respaldo',
-      description: 'UPS, generadores, protecciones y sistemas de continuidad',
+      title: 'Conectividad en cobre y fibra optica',
+      description: 'Cableado estructurado, enlaces de fibra optica y conectividad empresarial de alto rendimiento.',
       link: '/soluciones',
     },
     {
       icon: Briefcase,
-      title: 'Soluciones Empresariales',
-      description: 'ERP, CRM, BI, Ciberseguridad con IA y optimización de procesos',
+      title: 'Wifi empresarial',
+      description: 'Cobertura wifi corporativa, segmentacion segura y optimizacion de rendimiento inalambrico.',
       link: '/soluciones',
     },
-  ];
-
-  const requerimientos = [
-    'Sistemas eléctricos de protección para IT, UPS, pararrayos',
-    'Soluciones LAN campus cobre y fibra óptica',
-    'Data Center, climatización, contra incendios',
-    'ERP, Business Intelligence',
-    'Auditoría y mantenimiento de infraestructura IT, LAN/WAN/Wifi',
-    'Help desk, PCs y servidores, hardware y software',
-    'CCTV, alarmas, control de acceso',
-    'Iluminación LED para oficinas e industrias',
-    'Diseño/construcción de oficinas integrando IT, CCTV y eléctrico',
-    'Networking/Wifi con altos estándares de seguridad',
+    {
+      icon: Zap,
+      title: 'Sistemas electricos para IT',
+      description: 'Proteccion y respaldo electrico para infraestructura IT y continuidad operativa.',
+      link: '/soluciones',
+    },
+    {
+      icon: Shield,
+      title: 'CCTV',
+      description: 'Videovigilancia, grabacion y monitoreo remoto para seguridad de instalaciones.',
+      link: '/soluciones',
+    },
+    {
+      icon: Server,
+      title: 'Alarmas',
+      description: 'Alarmas corporativas con sensores y alertas en tiempo real para respuesta inmediata.',
+      link: '/soluciones',
+    },
+    {
+      icon: Building2,
+      title: 'Iluminacion para oficinas modernas',
+      description: 'Soluciones LED y diseno luminico funcional para espacios corporativos actuales.',
+      link: '/soluciones',
+    },
+    {
+      icon: Briefcase,
+      title: 'CRM',
+      description: 'Implementacion de CRM para seguimiento de clientes y automatizacion comercial.',
+      link: '/soluciones',
+    },
+    {
+      icon: Headset,
+      title: 'Soporte a hardware y software',
+      description: 'Soporte tecnico remoto y en sitio para equipos, plataformas y aplicaciones empresariales.',
+      link: '/soluciones',
+    },
   ];
 
   const diferenciadores = [
     {
       icon: Award,
       title: 'Experiencia comprobada',
-      description: '25 años brindando soluciones IT a empresas líderes en Ecuador',
+      description: '25 anos brindando soluciones IT a empresas lideres en Ecuador',
     },
     {
       icon: Building2,
       title: 'Soluciones integrales',
-      description: 'IT + eléctrico + seguridad + obra. Todo bajo una misma gestión',
+      description: 'IT + electrico + seguridad + obra. Todo bajo una misma gestion',
     },
     {
       icon: Users,
-      title: 'Implementación y soporte',
-      description: 'Equipo especializado, atención remota y presencial',
+      title: 'Implementacion y soporte',
+      description: 'Equipo especializado, atencion remota y presencial',
     },
     {
       icon: CheckCircle2,
-      title: 'Alianzas estratégicas',
-      description: 'Distribuidores certificados de las marcas tecnológicas líderes',
+      title: 'Alianzas estrategicas',
+      description: 'Distribuidores certificados de las marcas tecnologicas lideres',
     },
     {
       icon: TrendingUp,
       title: 'Enfoque en continuidad',
-      description: 'Diseñamos pensando en seguridad, escalabilidad y operación 24/7',
+      description: 'Disenamos pensando en seguridad, escalabilidad y operacion 24/7',
     },
   ];
 
@@ -135,17 +150,17 @@ export function Home() {
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section
-        className="relative min-h-[80vh] lg:h-screen flex items-center justify-center text-white"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(15, 23, 42, 0.85), rgba(6, 78, 118, 0.75)), url(https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyJTIwc2VydmVycyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzcxOTk4Njk2fDA&ixlib=rb-4.1.0&q=80&w=1080)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+      <motion.section
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: 'easeOut' }}
+        className="relative min-h-[80vh] overflow-hidden lg:h-screen flex items-center justify-center text-white"
       >
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <video className="absolute inset-0 h-full w-full object-cover" autoPlay loop muted playsInline>
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/75 to-cyan-900/65" />
+        <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="mb-6 text-3xl font-bold leading-tight sm:text-4xl lg:text-6xl">
             Soluciones integrales IT para
             <br className="hidden sm:block" />
@@ -155,24 +170,12 @@ export function Home() {
             </span>
           </h1>
           <p className="mx-auto mb-8 max-w-3xl text-base leading-relaxed text-gray-200 sm:text-xl">
-            Impulsamos centros de datos, infraestructura IT, digitalización y automatización para
-            operar con seguridad, continuidad y escalabilidad.
+            Impulsamos centros de datos, infraestructura IT, digitalizacion y automatizacion para operar con seguridad, continuidad y escalabilidad.
           </p>
-          <div className="mb-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2 text-sm backdrop-blur-sm">
-              25 años de experiencia
-            </Badge>
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2 text-sm backdrop-blur-sm">
-              Proyectos end-to-end
-            </Badge>
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2 text-sm backdrop-blur-sm">
-              Soporte especializado
-            </Badge>
-          </div>
           <div className="flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <Link to="/contacto" className="w-full sm:w-auto">
               <Button size="lg" className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-5 text-base hover:from-cyan-600 hover:to-blue-700 sm:w-auto sm:px-8 sm:py-6 sm:text-lg">
-                Solicitar diagnóstico
+                Solicitar diagnostico
               </Button>
             </Link>
             <Link to="/soluciones" className="w-full sm:w-auto">
@@ -182,133 +185,110 @@ export function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Qué hacemos */}
-      <section className="py-24 bg-white">
+      <motion.section {...fadeUp} className="py-24 bg-white">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Qué hacemos</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Soluciones tecnológicas integrales para impulsar su negocio
-            </p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Que hacemos</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Soluciones tecnologicas integrales para impulsar su negocio</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicios.map((servicio, index) => {
               const Icon = servicio.icon;
               return (
-                <Card key={index} className="p-8 hover:shadow-lg transition-shadow border-2 hover:border-cyan-200">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-900 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
-                    <Icon className="w-7 h-7 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{servicio.title}</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">{servicio.description}</p>
-                  <Link
-                    to={servicio.link}
-                    className="text-cyan-600 font-medium hover:text-cyan-700 inline-flex items-center gap-2"
-                  >
-                    Explorar
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </Card>
+                <motion.div key={index} {...fadeItem}>
+                  <Card className="p-8 hover:shadow-lg transition-shadow border-2 hover:border-cyan-200">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-900 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
+                      <Icon className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{servicio.title}</h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">{servicio.description}</p>
+                    <Link to={servicio.link} className="text-cyan-600 font-medium hover:text-cyan-700 inline-flex items-center gap-2">
+                      Explorar
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </Card>
+                </motion.div>
               );
             })}
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Requerimientos frecuentes */}
-      <section className="py-24 bg-gray-50">
+      <motion.section {...fadeUp} className="py-24 bg-white">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Requerimientos frecuentes</h2>
-            <p className="text-xl text-gray-600">
-              Soluciones que nuestros clientes corporativos necesitan
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {requerimientos.map((req, index) => (
-              <div key={index} className="flex items-start gap-3 bg-white p-5 rounded-lg shadow-sm">
-                <CheckCircle2 className="w-6 h-6 text-cyan-600 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-700">{req}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Por qué INCOMSAT */}
-      <section className="py-24 bg-white">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Por qué INCOMSAT</h2>
-            <p className="text-xl text-gray-600">
-              Su socio estratégico en transformación digital
-            </p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Por que INCOMSAT</h2>
+            <p className="text-xl text-gray-600">Su socio estrategico en transformacion digital</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {diferenciadores.map((item, index) => {
               const Icon = item.icon;
               return (
-                <div key={index} className="text-center">
+                <motion.div key={index} {...fadeItem} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-blue-900 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{item.description}</p>
-                </div>
+                </motion.div>
               );
             })}
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Casos de éxito preview */}
-      <section className="py-24 bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-900 text-white">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <motion.section
+        {...fadeUp}
+        className="relative overflow-hidden py-24 text-white"
+        style={{
+          backgroundImage: `url(${buildingsBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/85 via-blue-900/80 to-cyan-900/75" />
+        <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Casos de Éxito</h2>
-            <p className="text-xl text-gray-200">
-              Más de 40 empresas líderes confían en INCOMSAT
-            </p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Casos de Exito</h2>
+            <p className="text-xl text-gray-200">Mas de 40 empresas lideres confian en INCOMSAT</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
             {sectores.map((sector, index) => (
-              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 p-6 text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{sector.count}</div>
-                <div className="text-white font-medium">{sector.name}</div>
-              </Card>
+              <motion.div key={index} {...fadeItem}>
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-6 text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{sector.count}</div>
+                  <div className="text-white font-medium">{sector.name}</div>
+                </Card>
+              </motion.div>
             ))}
           </div>
 
           <div className="text-center">
             <Link to="/casos-exito">
               <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
-                Ver casos de éxito
+                Ver casos de exito
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Marcas que distribuimos preview */}
-      <section className="py-24 bg-gray-50">
+      <motion.section {...fadeUp} className="py-24 bg-gray-50">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Marcas que distribuimos</h2>
-            <p className="text-xl text-gray-600">
-              Aliados estratégicos con las mejores marcas tecnológicas
-            </p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Empresas con las que trabajamos</h2>
+            <p className="text-xl text-gray-600">Aliados estrategicos con las mejores marcas tecnologicas</p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
             {marcasPreview.map((marca, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center h-28">
+              <motion.div key={index} {...fadeItem} className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center h-28">
                 <div className="w-full h-14 flex items-center justify-center overflow-hidden">
                   <img
                     src={marca.logo}
@@ -316,38 +296,23 @@ export function Home() {
                     className={`h-auto max-h-12 w-auto object-contain transform-gpu ${marca.logoClass}`}
                   />
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <Link to="/marcas">
-              <Button variant="outline" className="border-gray-300">
-                Ver todas las marcas
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
-          </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* CTA Final */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 to-cyan-600 text-white">
+      <motion.section {...fadeUp} className="py-20 bg-gradient-to-r from-blue-900 to-cyan-600 text-white">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">¿Listo para transformar su infraestructura IT?</h2>
-          <p className="text-xl text-gray-100 mb-8">
-            Solicite un diagnóstico gratuito y descubra cómo podemos impulsar su negocio
-          </p>
+          <h2 className="text-3xl font-bold mb-4">Listo para transformar su infraestructura IT?</h2>
+          <p className="text-xl text-gray-100 mb-8">Solicite un diagnostico gratuito y descubra como podemos impulsar su negocio</p>
           <Link to="/contacto" className="w-full sm:w-auto">
             <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-              Solicitar diagnóstico gratuito
+              Solicitar diagnostico gratuito
             </Button>
           </Link>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }
-
-
-

@@ -16,99 +16,95 @@ import {
 } from 'lucide-react';
 import consultoriaDataCenterImg from '../../assets/soluciones-consultoria-data-center.png';
 import solucionesEmpresarialesImg from '../../assets/soluciones-empresariales.png';
-import redesNetworkingImg from '../../assets/soluciones-redes-networking.png';
+import redesNetworkingImg from '../../assets/fibraoptica.png';
 import sistemasElectricosImg from '../../assets/soluciones-sistemas-electricos.png';
 import seguridadElectronicaImg from '../../assets/soluciones-seguridad-electronica.png';
+import  alarmasImg from '../../assets/alarmas.jpg';
 import helpDeskImg from '../../assets/soluciones-help-desk.png';
 import disenoConstruccionImg from '../../assets/soluciones-diseno-construccion.png';
-import equiposComputacionImg from '../../assets/soluciones-equipos-computacion.png';
+import solucionesHeroBg from '../../assets/soluciones.jpg';
 
 export function Soluciones() {
   const soluciones = [
     {
-      icon: Briefcase,
-      title: 'Consultoría y Proyectos IT / Data Center',
-      items: [
-        'Asesoría estratégica en transformación digital',
-        'Implementación de proyectos IT a medida',
-        'Escalabilidad y sostenibilidad en infraestructuras tecnológicas',
-      ],
-      image: consultoriaDataCenterImg,
-    },
-    {
-      icon: Server,
-      title: 'Soluciones Empresariales',
-      items: [
-        'ERP, CRM y Business Intelligence',
-        'Ciberseguridad avanzada con inteligencia artificial',
-        'Optimización de procesos empresariales',
-      ],
-      image: solucionesEmpresarialesImg,
-    },
-    {
       icon: Network,
-      title: 'Redes y Networking',
+      title: 'Soluciones de conectividad en cobre y fibra optica',
       items: [
-        'Cableado estructurado cobre y fibra óptica',
-        'Diseño e implementación LAN/WAN',
-        'Infraestructura outdoor / planta externa',
+        'Cableado estructurado en cobre',
+        'Enlaces de fibra optica para alta velocidad',
+        'Diseno e implementacion de conectividad empresarial',
       ],
       image: redesNetworkingImg,
     },
     {
-      icon: Zap,
-      title: 'Sistemas Eléctricos, Protecciones y Respaldo IT',
+      icon: Briefcase,
+      title: 'Wifi empresarial',
       items: [
-        'UPS y generadores de respaldo',
-        'Pararrayos y protecciones contra transientes',
-        'Mallas a tierra y detección de incendios',
-        'Climatización para cuartos fríos / centros de cómputo',
-        'Iluminación LED industrial y para oficinas',
+        'Cobertura wifi para oficinas y sedes',
+        'Segmentacion segura por usuarios y dispositivos',
+        'Monitoreo y optimizacion del rendimiento inalambrico',
+      ],
+      image: consultoriaDataCenterImg,
+    },
+    {
+      icon: Zap,
+      title: 'Sistemas electricos para IT',
+      items: [
+        'Respaldo y proteccion electrica para infraestructura IT',
+        'Distribucion electrica para cuartos de equipos',
+        'Continuidad operativa para plataformas criticas',
       ],
       image: sistemasElectricosImg,
     },
     {
       icon: Shield,
-      title: 'Seguridad Electrónica',
+      title: 'CCTV',
       items: [
-        'CCTV analógico/IP con grabación digital',
-        'Cercas electrificadas y perímetro',
-        'Control de acceso y monitoreo 24/7',
-        'Integración con sistemas IT corporativos',
+        'Videovigilancia para interiores y exteriores',
+        'Grabacion y visualizacion remota',
+        'Integracion con monitoreo centralizado',
       ],
       image: seguridadElectronicaImg,
     },
     {
-      icon: Headset,
-      title: 'Help Desk y Asistencia Técnica IT',
+      icon: Server,
+      title: 'Alarmas',
       items: [
-        'Mesa de ayuda 24/7',
-        'Soporte remoto y presencial',
-        'Mantenimiento preventivo/correctivo (por contrato o evento)',
-        'Outsourcing de help desk (personal en sitio)',
+        'Alarmas de intrusion para entornos corporativos',
+        'Sensores y notificaciones en tiempo real',
+        'Respuesta rapida ante incidentes',
       ],
-      image: helpDeskImg,
+      image: alarmasImg,
     },
     {
       icon: Building2,
-      title: 'Diseño, Construcción y Remodelación de Oficinas con IT',
+      title: 'Soluciones de iluminacion con disenos para oficinas modernas',
       items: [
-        'Diseño arquitectónico de planos',
-        'Construcción/remodelación estilo moderno',
-        'Integración eléctrico + IT + CCTV',
-        'Implementación de data center/centros informáticos con obra civil y mobiliario',
+        'Diseno luminico para espacios de trabajo modernos',
+        'Soluciones LED de alta eficiencia',
+        'Integracion funcional y estetica del entorno',
       ],
       image: disenoConstruccionImg,
     },
     {
       icon: ShoppingCart,
-      title: 'Equipos de Computación y Accesorios (Venta)',
+      title: 'CRM',
       items: [
-        'Equipos electrónicos y computación',
-        'Accesorios de redes y computación',
-        'Proveedores confiables con garantía extendida',
+        'Implementacion de plataformas CRM',
+        'Automatizacion de procesos comerciales y de servicio',
+        'Seguimiento de clientes y oportunidades',
       ],
-      image: equiposComputacionImg,
+      image: solucionesEmpresarialesImg,
+    },
+    {
+      icon: Headset,
+      title: 'Soporte a hardware y software',
+      items: [
+        'Diagnostico y mantenimiento de equipos',
+        'Soporte tecnico remoto y en sitio',
+        'Atencion de incidentes de software empresarial',
+      ],
+      image: helpDeskImg,
     },
   ];
 
@@ -138,12 +134,19 @@ export function Soluciones() {
   return (
     <div className="w-full">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-900 text-white py-24">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section
+        className="relative overflow-hidden py-24 text-white"
+        style={{
+          backgroundImage: `url(${solucionesHeroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/85 via-blue-900/80 to-cyan-900/75" />
+        <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Soluciones de Alta Tecnología</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Consultoría, infraestructura IT, seguridad, soporte y proyectos integrales para
-            empresas y corporaciones.
+           Soluciones de IT e infraestructura tecnológica para empresas. Conectividad, seguridad y soporte integral.
           </p>
         </div>
       </section>
