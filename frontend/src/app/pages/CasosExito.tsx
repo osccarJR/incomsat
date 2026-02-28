@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router';
 import { Building2 } from 'lucide-react';
 import agaLogo from '../../assets/aga.png';
@@ -37,21 +36,10 @@ import tecnisegurosLogo from '../../assets/tecniseguros.jpeg';
 import teleamazonasLogo from '../../assets/teleamazonas.jpg';
 import universidadDelMilagroLogo from '../../assets/universidaddelmilagro.jpg';
 import unileverLogo from '../../assets/unilever.png';
-import { Badge } from '../components/ui/badge';
+import buildingsBg from '../../assets/buildings.jpg';
 import { Button } from '../components/ui/button';
 
 export function CasosExito() {
-  const [filtroActivo, setFiltroActivo] = useState<string>('todos');
-
-  const sectores = [
-    { id: 'todos', nombre: 'Todos', color: 'bg-gray-600' },
-    { id: 'seguros', nombre: 'Seguros', color: 'bg-blue-600' },
-    { id: 'comercio', nombre: 'Comercio y Servicios', color: 'bg-cyan-600' },
-    { id: 'bancos', nombre: 'Banca', color: 'bg-green-600' },
-    { id: 'industria', nombre: 'Industria', color: 'bg-orange-600' },
-    { id: 'gobierno', nombre: 'Gobierno', color: 'bg-purple-600' },
-  ];
-
   const casos = [
     { nombre: 'Salud S.A.', sector: 'seguros', logo: saludsaLogo },
     { nombre: 'Tecniseguros', sector: 'seguros', logo: tecnisegurosLogo },
@@ -93,90 +81,24 @@ export function CasosExito() {
     { nombre: 'ESPOL Gye', sector: 'gobierno', logo: espolLogo },
   ];
 
-  const casosFiltrados =
-    filtroActivo === 'todos'
-      ? casos
-      : casos.filter((caso) => caso.sector === filtroActivo);
-
-  const getSectorColor = (sector: string) => {
-    const sectorObj = sectores.find((s) => s.id === sector);
-    return sectorObj?.color || 'bg-gray-600';
-  };
-
-  const getSectorNombre = (sector: string) => {
-    const sectorObj = sectores.find((s) => s.id === sector);
-    return sectorObj?.nombre || sector;
-  };
+  const casosFiltrados = casos;
 
   return (
     <div className="w-full">
-      <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-900 py-24 text-white">
-        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-center">
+      <section
+        className="relative overflow-hidden py-24 text-white"
+        style={{
+          backgroundImage: `url(${buildingsBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/85 via-blue-900/80 to-cyan-900/75" />
+        <div className="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold">Casos de Exito</h1>
           <p className="mx-auto max-w-3xl text-xl text-gray-200">
             Mas de 40 empresas lideres en Ecuador confian en INCOMSAT para sus soluciones IT
           </p>
-        </div>
-      </section>
-
-      <section className="sticky top-20 z-40 border-b bg-white shadow-sm">
-        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <span className="text-sm font-medium text-gray-700">Filtrar por sector:</span>
-            <div className="flex gap-2 overflow-x-auto pb-1">
-              {sectores.map((sector) => (
-                <Button
-                  key={sector.id}
-                  variant={filtroActivo === sector.id ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => setFiltroActivo(sector.id)}
-                  className={`shrink-0 ${filtroActivo === sector.id ? 'bg-gradient-to-r from-blue-900 to-cyan-600' : ''}`}
-                >
-                  {sector.nombre}
-                </Button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <p className="text-gray-600">
-              Mostrando <span className="font-semibold text-gray-900">{casosFiltrados.length}</span>{' '}
-              {filtroActivo === 'todos' ? 'clientes' : `clientes en ${getSectorNombre(filtroActivo)}`}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {casosFiltrados.map((caso, index) => (
-              <div
-                key={index}
-                className="group relative rounded-lg border-2 border-gray-100 bg-white p-6 shadow-sm transition-all hover:border-cyan-200 hover:shadow-md"
-              >
-                <Badge className={`${getSectorColor(caso.sector)} absolute right-5 top-5 border-0 text-xs text-white`}>
-                  {getSectorNombre(caso.sector)}
-                </Badge>
-                <div className="mb-4 flex h-14 items-center pr-24">
-                  <div
-                    className={`flex items-center justify-start overflow-hidden rounded-lg ${
-                      caso.logo ? 'h-full w-full' : 'h-12 w-12 bg-gradient-to-br from-blue-900 to-cyan-600'
-                    }`}
-                  >
-                    {caso.logo ? (
-                      <img src={caso.logo} alt={caso.nombre} className="max-h-full max-w-full object-contain" />
-                    ) : (
-                      <Building2 className="h-6 w-6 text-white" />
-                    )}
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 transition-colors group-hover:text-cyan-600">
-                  {caso.nombre}
-                </h3>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -203,11 +125,41 @@ export function CasosExito() {
         </div>
       </section>
 
+      <section className="bg-gray-50 py-16">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {casosFiltrados.map((caso, index) => (
+              <div
+                key={index}
+                className="group relative flex flex-col items-center rounded-lg border-2 border-gray-100 bg-white p-6 text-center shadow-sm transition-all hover:border-cyan-200 hover:shadow-md"
+              >
+                <div className="mb-5 flex h-24 w-full items-center justify-center">
+                  <div
+                    className={`flex items-center justify-center overflow-hidden rounded-lg ${
+                      caso.logo ? 'h-full w-full' : 'h-16 w-16 bg-gradient-to-br from-blue-900 to-cyan-600'
+                    }`}
+                  >
+                    {caso.logo ? (
+                      <img src={caso.logo} alt={caso.nombre} className="h-full w-full object-contain" />
+                    ) : (
+                      <Building2 className="h-8 w-8 text-white" />
+                    )}
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 transition-colors group-hover:text-cyan-600">
+                  {caso.nombre}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-gradient-to-r from-blue-900 to-cyan-600 py-20 text-white">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="mb-4 text-3xl font-bold">Quieres ser nuestro proximo caso de exito?</h2>
           <p className="mb-8 text-xl text-gray-100">
-            Cuentanos sobre su proyecto y descubra como podemos ayudarle
+            Cuentanos sobre tu proyecto y descubre como podemos ayudarte
           </p>
           <Link to="/contacto">
             <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
@@ -219,5 +171,4 @@ export function CasosExito() {
     </div>
   );
 }
-
 

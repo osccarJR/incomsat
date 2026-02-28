@@ -17,7 +17,7 @@ export function Layout() {
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <SeoManager />
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-20">
         <Outlet />
       </main>
       <Footer />

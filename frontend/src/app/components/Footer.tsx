@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { MapPin } from 'lucide-react';
 import incomsatLogo from '../../assets/a98b4a391ec1523e228782f615f8992c0c2b51aa.png';
+import logoNube from '../../assets/logo_nube.png';
 
 export function Footer() {
   return (
@@ -20,27 +21,37 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
                 <Link to="/soluciones" className="transition-colors hover:text-cyan-400">
-                  Consultoria IT
+                  Conectividad en cobre y fibra optica
                 </Link>
               </li>
               <li>
                 <Link to="/soluciones" className="transition-colors hover:text-cyan-400">
-                  Redes y Networking
+                  Wifi empresarial
                 </Link>
               </li>
               <li>
                 <Link to="/soluciones" className="transition-colors hover:text-cyan-400">
-                  Data Center
+                  Sistemas electricos para IT
                 </Link>
               </li>
               <li>
                 <Link to="/soluciones" className="transition-colors hover:text-cyan-400">
-                  Seguridad Electronica
+                  CCTV y alarmas
                 </Link>
               </li>
               <li>
                 <Link to="/soluciones" className="transition-colors hover:text-cyan-400">
-                  Help Desk 24/7
+                  Iluminacion para oficinas modernas
+                </Link>
+              </li>
+              <li>
+                <Link to="/soluciones" className="transition-colors hover:text-cyan-400">
+                  CRM
+                </Link>
+              </li>
+              <li>
+                <Link to="/soluciones" className="transition-colors hover:text-cyan-400">
+                  Soporte a hardware y software
                 </Link>
               </li>
             </ul>
@@ -50,6 +61,11 @@ export function Footer() {
             <h3 className="mb-4 font-semibold text-white">Empresa</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
+                <Link to="/" className="transition-colors hover:text-cyan-400">
+                  Inicio
+                </Link>
+              </li>
+              <li>
                 <Link to="/nosotros" className="transition-colors hover:text-cyan-400">
                   Nosotros
                 </Link>
@@ -57,11 +73,6 @@ export function Footer() {
               <li>
                 <Link to="/casos-exito" className="transition-colors hover:text-cyan-400">
                   Casos de Exito
-                </Link>
-              </li>
-              <li>
-                <Link to="/marcas" className="transition-colors hover:text-cyan-400">
-                  Marcas
                 </Link>
               </li>
               <li>
@@ -82,15 +93,17 @@ export function Footer() {
                   <a href="mailto:info@incomsat.net" className="transition-colors hover:text-cyan-400">
                     info@incomsat.net
                   </a>
+                  <div className="text-gray-300">+593 0999104889</div>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-400" />
                 <div>
                   <div className="font-medium text-white">Guayaquil</div>
-                  <a href="mailto:infosas@incomsat.net" className="transition-colors hover:text-cyan-400">
-                    infosas@incomsat.net
+                  <a href="mailto:info@incomsat.net" className="transition-colors hover:text-cyan-400">
+                    info@incomsat.net
                   </a>
+                  <div className="text-gray-300">+593 0999104889</div>
                 </div>
               </li>
             </ul>
@@ -98,9 +111,20 @@ export function Footer() {
         </div>
 
         <div className="border-t border-blue-800/50 pt-8">
-          <div className="flex flex-col gap-2 text-sm text-gray-400 md:flex-row md:items-center md:justify-between">
+          <div className="flex justify-center text-center text-sm text-gray-400">
             <p>&copy; 2026 INCOMSAT - Information Technology Services. Todos los derechos reservados.</p>
-            <p>25 anos de experiencia en soluciones IT</p>
+          </div>
+          <div className="mt-4 flex items-center justify-center gap-2 border-t border-blue-800/40 pt-4 text-sm text-gray-300">
+            <img src={logoNube} alt="Nube Nivusoftware" className="h-4 w-4 object-contain" />
+            <span>Desarrollado por</span>
+            <a
+              href="https://www.nivusoftware.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-white transition-colors hover:text-cyan-300"
+            >
+              Nivusoftware
+            </a>
           </div>
         </div>
       </div>

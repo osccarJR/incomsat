@@ -1,7 +1,8 @@
 import { Link } from 'react-router';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
-import { Target, Eye, Award, Building2, Users, CheckCircle2, Shield, Calendar } from 'lucide-react';
+import { Target, Eye, Award, Building2, Users, CheckCircle2, Shield, Calendar, ArrowRight } from 'lucide-react';
+import nosotrosBg from '../../assets/us.jpg';
 
 export function Nosotros() {
   const diferenciadores = [
@@ -54,29 +55,20 @@ export function Nosotros() {
 
   return (
     <div className="w-full">
-      <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-900 py-24 text-white">
-        <div className="mx-auto max-w-[1280px] px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl">INCOMSAT, su socio estrategico en soluciones IT</h1>
+      <section
+        className="relative overflow-hidden py-24 text-white"
+        style={{
+          backgroundImage: `url(${nosotrosBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/85 via-blue-900/80 to-cyan-900/75" />
+        <div className="relative z-10 mx-auto max-w-[1280px] px-4 text-center sm:px-6 lg:px-8">
+          <h1 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl">INCOMSAT</h1>
           <p className="mx-auto max-w-3xl text-lg text-gray-200 sm:text-xl">
             Desde 1999, transformando la infraestructura tecnologica de empresas y corporaciones en Ecuador.
           </p>
-        </div>
-      </section>
-
-      <section className="border-b bg-white py-20">
-        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {cifras.map((cifra, index) => {
-              const Icon = cifra.icon;
-              return (
-                <div key={index} className="text-center">
-                  <Icon className="mx-auto mb-4 h-12 w-12 text-cyan-600" />
-                  <div className="mb-2 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">{cifra.numero}</div>
-                  <div className="text-gray-600">{cifra.texto}</div>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </section>
 
@@ -158,13 +150,36 @@ export function Nosotros() {
             <p className="text-lg text-gray-600 sm:text-xl">25 anos construyendo el futuro digital de Ecuador.</p>
           </div>
 
-          <div className="mx-auto max-w-4xl space-y-6">
-            {hitos.map((hito, index) => (
-              <div key={index} className="rounded-lg border-2 border-gray-100 bg-white p-6 shadow-sm">
-                <div className="mb-2 text-2xl font-bold text-cyan-600">{hito.anio}</div>
-                <p className="text-gray-700">{hito.texto}</p>
-              </div>
-            ))}
+          <div className="mx-auto max-w-5xl lg:hidden">
+            <div className="space-y-8">
+              {hitos.map((hito, index) => (
+                <div key={index} className="relative pl-10">
+                  {index < hitos.length - 1 && <div className="absolute left-[15px] top-8 h-[calc(100%+1.5rem)] w-0.5 bg-cyan-200" />}
+                  <div className="absolute left-0 top-1 h-8 w-8 rounded-full border-2 border-cyan-600 bg-white" />
+                  <div className="rounded-lg border-2 border-gray-100 bg-white p-6 shadow-sm">
+                    <div className="mb-2 text-2xl font-bold text-cyan-600">{hito.anio}</div>
+                    <p className="text-gray-700">{hito.texto}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mx-auto hidden max-w-6xl lg:block">
+            <div className="grid grid-cols-4 items-start gap-4">
+              {hitos.map((hito, index) => (
+                <div key={index} className="relative">
+                  <div className="mb-5 flex items-center">
+                    <div className="h-9 w-9 rounded-full border-2 border-cyan-600 bg-white" />
+                    {index < hitos.length - 1 && <ArrowRight className="ml-3 h-5 w-5 text-cyan-600" />}
+                  </div>
+                  <div className="rounded-lg border-2 border-gray-100 bg-white p-5 shadow-sm">
+                    <div className="mb-2 text-2xl font-bold text-cyan-600">{hito.anio}</div>
+                    <p className="text-gray-700">{hito.texto}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

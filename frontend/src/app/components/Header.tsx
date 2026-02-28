@@ -27,37 +27,39 @@ export function Header() {
   const navLinks = [
     { to: '/soluciones', label: 'Soluciones' },
     { to: '/casos-exito', label: 'Casos de Exito' },
-    { to: '/marcas', label: 'Marcas' },
     { to: '/nosotros', label: 'Nosotros' },
     { to: '/contacto', label: 'Contacto' },
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
-      <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
+      <div className="relative mx-auto flex h-24 max-w-[1280px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center" onClick={handleNavigate}>
-          <img src={incomsatLogo} alt="INCOMSAT" className="h-10 sm:h-12" />
+          <img src={incomsatLogo} alt="INCOMSAT" className="h-10 sm:h-14" />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 md:flex">
           {navLinks.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               onClick={handleNavigate}
-              className={`text-sm font-medium transition-colors hover:text-cyan-600 ${
+              className={`text-base font-semibold transition-colors hover:text-cyan-600 lg:text-lg ${
                 isActive(item.to) ? 'text-cyan-600' : 'text-gray-700'
               }`}
             >
               {item.label}
             </Link>
           ))}
+        </nav>
+
+        <div className="hidden md:block">
           <Link to="/contacto" onClick={handleNavigate}>
             <Button className="bg-gradient-to-r from-blue-900 to-cyan-600 hover:from-blue-800 hover:to-cyan-500">
               Solicitar diagnostico
             </Button>
           </Link>
-        </nav>
+        </div>
 
         <button
           type="button"
