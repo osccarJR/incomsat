@@ -101,11 +101,7 @@ export function Home() {
     {
       icon: Award,
       title: 'Experiencia comprobada',
-<<<<<<< HEAD
       description: '25 años brindando soluciones IT a empresas lideres en Ecuador',
-=======
-      description: '25 anos brindando soluciones IT a empresas lideres en Ecuador',
->>>>>>> 741ba6054b7deb20e9a06c9e24eb62a7351c3b7e
     },
     {
       icon: Building2,
