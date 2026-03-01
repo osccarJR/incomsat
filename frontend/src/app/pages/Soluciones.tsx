@@ -13,6 +13,7 @@ import {
   ArrowRight,
   Phone,
   CheckCircle2,
+  ChevronRight
 } from 'lucide-react';
 import consultoriaDataCenterImg from '../../assets/soluciones-consultoria-data-center.png';
 import solucionesEmpresarialesImg from '../../assets/soluciones-empresariales.png';
@@ -177,16 +178,22 @@ export function Soluciones() {
                       </ul>
                       <div className="flex flex-col sm:flex-row gap-4">
                         <Link to="/contacto">
-                          <Button className="bg-gradient-to-r from-blue-900 to-cyan-600 hover:from-blue-800 hover:to-cyan-500">
+                          <Button className="h-11 rounded-md bg-gradient-to-r from-blue-900 to-cyan-600 px-5 font-semibold hover:from-blue-800 hover:to-cyan-500">
                             Pedir cotización
                           </Button>
                         </Link>
-                        <Link to="/contacto">
-                          <Button variant="outline">
-                            <Phone className="w-4 h-4 mr-2" />
-                            Hablar con especialista
-                          </Button>
-                        </Link>
+                        <a
+                          href={`https://wa.me/+593994993430?text=${encodeURIComponent(
+                            `Hola, estoy interesado en los servicios para ${solucion.title}`
+                          )}`}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-green-600 px-5 font-semibold text-white transition-colors hover:bg-green-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
+                        >
+                          <Phone className="h-4 w-4" />
+                          Solicitar por WhatsApp
+                          <ChevronRight size={18} />
+                        </a>
                       </div>
                     </div>
                     <div
@@ -247,5 +254,3 @@ export function Soluciones() {
     </div>
   );
 }
-
-

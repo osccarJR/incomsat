@@ -111,7 +111,7 @@ export function CasosExito() {
             </div>
             <div className="text-center">
               <div className="mb-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-cyan-600">25</div>
-              <div className="text-gray-600">Anos de experiencia</div>
+              <div className="text-gray-600">años de experiencia</div>
             </div>
             <div className="text-center">
               <div className="mb-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-cyan-600">5</div>
@@ -159,11 +159,11 @@ export function CasosExito() {
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="mb-4 text-3xl font-bold">Quieres ser nuestro proximo caso de exito?</h2>
           <p className="mb-8 text-xl text-gray-100">
-            Cuentanos sobre tu proyecto y descubre como podemos ayudarte
+            Cuentaños sobre tu proyecto y descubre como podemos ayudarte
           </p>
           <Link to="/contacto">
             <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-              Cuentanos tu proyecto
+              Cuentaños tu proyecto
             </Button>
           </Link>
         </div>

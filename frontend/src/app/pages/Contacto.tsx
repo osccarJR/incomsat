@@ -154,7 +154,7 @@ export function Contacto() {
               <div className="space-y-2 text-gray-700">
                 <div>
                   <div className="font-medium">Lunes a Viernes</div>
-                  <div className="text-gray-600">8:00 - 18:00</div>
+                  <div className="text-gray-600">9:00 - 18:00</div>
                 </div>
                 <div>
                   <div className="font-medium">Soporte 24/7</div>
@@ -343,8 +343,10 @@ export function Contacto() {
         >
           <div className="absolute inset-0 bg-blue-900/60 flex items-center justify-center">
             <div className="text-center text-white">
-              <h3 className="text-3xl font-bold mb-2">Presencia en Ecuador</h3>
-              <p className="text-lg">Oficinas en Quito y Guayaquil</p>
+              <h3 className="text-3xl font-extrabold uppercase tracking-wide mb-3 text-cyan-200">
+                Proximamente oficinas en Colombia y Estados Unidos
+              </h3>
+              <p className="text-lg font-semibold">Seguimos creciendo para estar mas cerca de usted</p>
             </div>
           </div>
         </div>
@@ -352,6 +354,5 @@ export function Contacto() {
     </div>
   );
 }
-
 
 

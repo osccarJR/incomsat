@@ -8,7 +8,7 @@ export function Nosotros() {
   const diferenciadores = [
     {
       icon: Calendar,
-      title: '25 anos de experiencia',
+      title: '25 años de experiencia',
       description:
         'Mas de dos decadas brindando soluciones IT a empresas lideres en Ecuador, con proyectos exitosos en distintos sectores.',
     },
@@ -40,7 +40,7 @@ export function Nosotros() {
   ];
 
   const cifras = [
-    { numero: '25', texto: 'Anos de experiencia', icon: Award },
+    { numero: '25', texto: 'años de experiencia', icon: Award },
     { numero: '40+', texto: 'Clientes corporativos', icon: Building2 },
     { numero: '100+', texto: 'Proyectos implementados', icon: CheckCircle2 },
     { numero: '24/7', texto: 'Soporte disponible', icon: Users },
@@ -48,9 +48,12 @@ export function Nosotros() {
 
   const hitos = [
     { anio: '1999', texto: 'Fundacion de INCOMSAT y primeros proyectos IT corporativos.' },
-    { anio: '2005-2010', texto: 'Expansion hacia redes empresariales, data center y seguridad electronica.' },
-    { anio: '2015-2020', texto: 'Certificaciones con fabricantes globales y escalamiento en sectores criticos.' },
-    { anio: '2024', texto: 'Mas de 40 clientes corporativos y liderazgo en soluciones IT integrales.' },
+    {
+      anio: '2005-2010',
+      texto:
+        'Expansion hacia redes empresariales, data center y seguridad electronica. Certificaciones con fabricantes globales y escalamiento en sectores criticos.',
+    },
+    { anio: '2011-2026', texto: 'Mas de 40 clientes corporativos y liderazgo en soluciones IT integrales.' },
   ];
 
   return (
@@ -147,7 +150,7 @@ export function Nosotros() {
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">Nuestra trayectoria</h2>
-            <p className="text-lg text-gray-600 sm:text-xl">25 anos construyendo el futuro digital de Ecuador.</p>
+            <p className="text-lg text-gray-600 sm:text-xl">25 años construyendo el futuro digital de Ecuador.</p>
           </div>
 
           <div className="mx-auto max-w-5xl lg:hidden">
@@ -165,8 +168,8 @@ export function Nosotros() {
             </div>
           </div>
 
-          <div className="mx-auto hidden max-w-6xl lg:block">
-            <div className="grid grid-cols-4 items-start gap-4">
+          <div className="mx-auto hidden max-w-5xl lg:block">
+            <div className="grid grid-cols-3 items-start gap-6">
               {hitos.map((hito, index) => (
                 <div key={index} className="relative">
                   <div className="mb-5 flex items-center">

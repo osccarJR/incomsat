@@ -25,6 +25,7 @@ export function Header() {
   };
 
   const navLinks = [
+    { to: '/', label: 'Inicio' },
     { to: '/soluciones', label: 'Soluciones' },
     { to: '/casos-exito', label: 'Casos de Exito' },
     { to: '/nosotros', label: 'Nosotros' },
