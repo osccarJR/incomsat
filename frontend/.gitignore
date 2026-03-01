@@ -8,3 +8,10 @@ yarn-debug.log*
 yarn-error.log*
 .env
 .env.*
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/

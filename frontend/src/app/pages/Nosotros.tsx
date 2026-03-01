@@ -1,14 +1,26 @@
+<<<<<<< HEAD
 import { Link } from 'react-router';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Target, Eye, Award, Building2, Users, CheckCircle2, Shield, Calendar, ArrowRight } from 'lucide-react';
 import nosotrosBg from '../../assets/us.jpg';
+=======
+import { Link } from 'react-router';
+import { Button } from '../components/ui/button';
+import { Card } from '../components/ui/card';
+import { Target, Eye, Award, Building2, Users, CheckCircle2, Shield, Calendar, ArrowRight } from 'lucide-react';
+import nosotrosBg from '../../assets/us.jpg';
+>>>>>>> 741ba6054b7deb20e9a06c9e24eb62a7351c3b7e
 
 export function Nosotros() {
   const diferenciadores = [
     {
       icon: Calendar,
+<<<<<<< HEAD
       title: '25 años de experiencia',
+=======
+      title: '25 anos de experiencia',
+>>>>>>> 741ba6054b7deb20e9a06c9e24eb62a7351c3b7e
       description:
         'Mas de dos decadas brindando soluciones IT a empresas lideres en Ecuador, con proyectos exitosos en distintos sectores.',
     },
@@ -40,12 +52,17 @@ export function Nosotros() {
   ];
 
   const cifras = [
+<<<<<<< HEAD
     { numero: '25', texto: 'años de experiencia', icon: Award },
+=======
+    { numero: '25', texto: 'Anos de experiencia', icon: Award },
+>>>>>>> 741ba6054b7deb20e9a06c9e24eb62a7351c3b7e
     { numero: '40+', texto: 'Clientes corporativos', icon: Building2 },
     { numero: '100+', texto: 'Proyectos implementados', icon: CheckCircle2 },
     { numero: '24/7', texto: 'Soporte disponible', icon: Users },
   ];
 
+<<<<<<< HEAD
   const hitos = [
     { anio: '1999', texto: 'Fundacion de INCOMSAT y primeros proyectos IT corporativos.' },
     {
@@ -73,6 +90,32 @@ export function Nosotros() {
             Desde 1999, transformando la infraestructura tecnologica de empresas y corporaciones en Ecuador.
           </p>
         </div>
+=======
+  const hitos = [
+    { anio: '1999', texto: 'Fundacion de INCOMSAT y primeros proyectos IT corporativos.' },
+    { anio: '2005-2010', texto: 'Expansion hacia redes empresariales, data center y seguridad electronica.' },
+    { anio: '2015-2020', texto: 'Certificaciones con fabricantes globales y escalamiento en sectores criticos.' },
+    { anio: '2024', texto: 'Mas de 40 clientes corporativos y liderazgo en soluciones IT integrales.' },
+  ];
+
+  return (
+    <div className="w-full">
+      <section
+        className="relative overflow-hidden py-24 text-white"
+        style={{
+          backgroundImage: `url(${nosotrosBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/85 via-blue-900/80 to-cyan-900/75" />
+        <div className="relative z-10 mx-auto max-w-[1280px] px-4 text-center sm:px-6 lg:px-8">
+          <h1 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl">INCOMSAT</h1>
+          <p className="mx-auto max-w-3xl text-lg text-gray-200 sm:text-xl">
+            Desde 1999, transformando la infraestructura tecnologica de empresas y corporaciones en Ecuador.
+          </p>
+        </div>
+>>>>>>> 741ba6054b7deb20e9a06c9e24eb62a7351c3b7e
       </section>
 
       <section className="bg-gray-50 py-24">
@@ -150,7 +193,11 @@ export function Nosotros() {
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">Nuestra trayectoria</h2>
+<<<<<<< HEAD
             <p className="text-lg text-gray-600 sm:text-xl">25 años construyendo el futuro digital de Ecuador.</p>
+=======
+            <p className="text-lg text-gray-600 sm:text-xl">25 anos construyendo el futuro digital de Ecuador.</p>
+>>>>>>> 741ba6054b7deb20e9a06c9e24eb62a7351c3b7e
           </div>
 
           <div className="mx-auto max-w-5xl lg:hidden">
@@ -168,8 +215,13 @@ export function Nosotros() {
             </div>
           </div>
 
+<<<<<<< HEAD
           <div className="mx-auto hidden max-w-5xl lg:block">
             <div className="grid grid-cols-3 items-start gap-6">
+=======
+          <div className="mx-auto hidden max-w-6xl lg:block">
+            <div className="grid grid-cols-4 items-start gap-4">
+>>>>>>> 741ba6054b7deb20e9a06c9e24eb62a7351c3b7e
               {hitos.map((hito, index) => (
                 <div key={index} className="relative">
                   <div className="mb-5 flex items-center">

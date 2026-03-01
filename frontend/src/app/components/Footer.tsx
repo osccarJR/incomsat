@@ -11,7 +11,11 @@ export function Footer() {
           <div>
             <img src={incomsatLogo} alt="INCOMSAT" className="mb-4 h-12 brightness-0 invert" />
             <p className="text-sm leading-relaxed text-gray-300">
+<<<<<<< HEAD
               Soluciones integrales IT para Empresas y Corporaciones. 25 años impulsando la
+=======
+              Soluciones integrales IT para Empresas y Corporaciones. 25 anos impulsando la
+>>>>>>> 741ba6054b7deb20e9a06c9e24eb62a7351c3b7e
               transformacion digital.
             </p>
           </div>
