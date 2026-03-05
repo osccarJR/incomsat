@@ -53,7 +53,7 @@ export function CasosExito() {
     { nombre: 'Metropolitan Touring', sector: 'comercio', logo: metropolitantouringLogo },
     { nombre: 'Lan Ecuador', sector: 'comercio', logo: lanEcuadorLogo },
     { nombre: 'Automotors y Anexos', sector: 'comercio', logo: automotoresyAnexosLogo },
-    { nombre: 'Grupo Calderon', sector: 'comercio', logo: grupoCalderonLogo },
+    { nombre: 'Grupo Calderón', sector: 'comercio', logo: grupoCalderonLogo },
     { nombre: 'IBM', sector: 'comercio', logo: ibmLogo },
     { nombre: 'Teleamazonas', sector: 'comercio', logo: teleamazonasLogo },
     { nombre: 'Bico Internacional', sector: 'comercio' },
@@ -65,12 +65,12 @@ export function CasosExito() {
     { nombre: 'Arca', sector: 'industria', logo: arcaLogo },
     { nombre: 'AGA', sector: 'industria', logo: agaLogo },
     { nombre: 'Refreshment Coca Cola', sector: 'industria', logo: cocacolaLogo },
-    { nombre: 'Cerveceria Nacional', sector: 'industria', logo: cerveceriaNacionalLogo },
+    { nombre: 'Cervecería Nacional', sector: 'industria', logo: cerveceriaNacionalLogo },
     { nombre: 'Unilever', sector: 'industria', logo: unileverLogo },
     { nombre: 'Laboratorios Life', sector: 'industria', logo: lifeLogo },
     { nombre: 'Pronaca', sector: 'industria', logo: pronacaLogo },
     { nombre: 'Reybanpac', sector: 'industria', logo: reybanpacLogo },
-    { nombre: 'Pinturas Condor', sector: 'industria', logo: condorLogo },
+    { nombre: 'Pinturas Cóndor', sector: 'industria', logo: condorLogo },
     { nombre: 'Pepsico', sector: 'industria', logo: pepsicoLogo },
     { nombre: 'Grupo Carvajal', sector: 'industria', logo: grupoCarvajalLogo },
     { nombre: 'Norma', sector: 'industria', logo: normaLogo },
@@ -95,9 +95,9 @@ export function CasosExito() {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/85 via-blue-900/80 to-cyan-900/75" />
         <div className="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold">Casos de Exito</h1>
+          <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold">Casos de Éxito</h1>
           <p className="mx-auto max-w-3xl text-xl text-gray-200">
-            Mas de 40 empresas lideres en Ecuador confian en INCOMSAT para sus soluciones IT
+            Más de 40 empresas líderes en Ecuador confían en INCOMSAT para sus soluciones IT
           </p>
         </div>
       </section>
@@ -157,13 +157,13 @@ export function CasosExito() {
 
       <section className="bg-gradient-to-r from-blue-900 to-cyan-600 py-20 text-white">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="mb-4 text-3xl font-bold">Quieres ser nuestro proximo caso de exito?</h2>
+          <h2 className="mb-4 text-3xl font-bold">¿Quieres ser nuestro próximo caso de Éxito?</h2>
           <p className="mb-8 text-xl text-gray-100">
-            Cuentanos sobre tu proyecto y descubre como podemos ayudarte
+            Cuéntanos sobre tu proyecto y descubre cómo podemos ayudarte
           </p>
           <Link to="/contacto">
             <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-              Cuentanos tu proyecto
+              Cuéntanos tu proyecto
             </Button>
           </Link>
         </div>

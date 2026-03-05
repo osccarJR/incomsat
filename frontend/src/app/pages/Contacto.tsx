@@ -60,7 +60,7 @@ export function Contacto() {
       }
 
       toast.success('Solicitud enviada', {
-        description: 'Nuestro equipo se pondra en contacto en 24-48 horas habiles.',
+        description: 'Nuestro equipo se pondrá en contacto en 24-48 horas hábiles.',
       });
 
       setFormData({
@@ -344,9 +344,9 @@ export function Contacto() {
           <div className="absolute inset-0 bg-blue-900/60 flex items-center justify-center">
             <div className="text-center text-white">
               <h3 className="text-3xl font-extrabold uppercase tracking-wide mb-3 text-cyan-200">
-                Proximamente oficinas en Colombia y Estados Unidos
+                Próximamente oficinas en Colombia y Estados Unidos
               </h3>
-              <p className="text-lg font-semibold">Seguimos creciendo para estar mas cerca de usted</p>
+              <p className="text-lg font-semibold">Seguimos creciendo para estar más cerca de usted</p>
             </div>
           </div>
         </div>

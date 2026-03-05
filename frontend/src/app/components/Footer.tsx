@@ -12,7 +12,7 @@ export function Footer() {
             <img src={incomsatLogo} alt="INCOMSAT" className="mb-4 h-12 brightness-0 invert" />
             <p className="text-sm leading-relaxed text-gray-300">
               Soluciones integrales IT para Empresas y Corporaciones. 25 años impulsando la
-              transformacion digital.
+              transformación digital.
             </p>
           </div>
 
@@ -21,7 +21,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
                 <Link to="/soluciones" className="transition-colors hover:text-cyan-400">
-                  Conectividad en cobre y fibra optica
+                  Conectividad en cobre y fibra óptica
                 </Link>
               </li>
               <li>
@@ -41,7 +41,7 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/soluciones" className="transition-colors hover:text-cyan-400">
-                  Iluminacion para oficinas modernas
+                  Iluminación para oficinas modernas
                 </Link>
               </li>
               <li>

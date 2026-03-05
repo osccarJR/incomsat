@@ -10,30 +10,30 @@ export function Nosotros() {
       icon: Calendar,
       title: '25 años de experiencia',
       description:
-        'Mas de dos decadas brindando soluciones IT a empresas lideres en Ecuador, con proyectos exitosos en distintos sectores.',
+        'Más de dos décadas brindando soluciones IT a empresas líderes en Ecuador, con proyectos exitosos en distintos sectores.',
     },
     {
       icon: Building2,
       title: 'Soluciones integrales',
       description:
-        'Integramos IT, sistemas electricos, seguridad electronica y obra civil bajo una gestion unificada.',
+        'Integramos IT, sistemas eléctricos, seguridad electrónica y obra civil bajo una gestión unificada.',
     },
     {
       icon: Users,
       title: 'Soporte especializado',
       description:
-        'Equipo tecnico certificado con atencion remota y presencial, incluida mesa de ayuda 24/7.',
+        'Equipo técnico certificado con atención remota y presencial, incluida mesa de ayuda 24/7.',
     },
     {
       icon: Shield,
       title: 'Continuidad y seguridad',
       description:
-        'Cada solucion se diseña para alta disponibilidad, proteccion de datos y escalabilidad futura.',
+        'Cada solución se diseña para alta disponibilidad, protección de datos y escalabilidad futura.',
     },
   ];
 
   const valores = [
-    { title: 'Innovacion', description: 'Adoptamos tecnologia actual para mantener a nuestros clientes a la vanguardia.' },
+    { title: 'Innovación', description: 'Adoptamos tecnología actual para mantener a nuestros clientes a la vanguardia.' },
     { title: 'Confianza', description: 'Construimos relaciones de largo plazo con resultados y transparencia.' },
     { title: 'Excelencia', description: 'Compromiso con calidad en cada etapa, desde diseño hasta soporte.' },
     { title: 'Sostenibilidad', description: 'Optimizamos recursos para reducir impacto y costo operativo.' },
@@ -47,13 +47,13 @@ export function Nosotros() {
   ];
 
   const hitos = [
-    { anio: '1999', texto: 'Fundacion de INCOMSAT y primeros proyectos IT corporativos.' },
+    { anio: '1999', texto: 'Fundación de INCOMSAT y primeros proyectos IT corporativos.' },
     {
       anio: '2005-2010',
       texto:
-        'Expansion hacia redes empresariales, data center y seguridad electronica. Certificaciones con fabricantes globales y escalamiento en sectores criticos.',
+        'Expansión hacia redes empresariales, data center y seguridad electrónica. Certificaciones con fabricantes globales y escalamiento en sectores críticos.',
     },
-    { anio: '2011-2026', texto: 'Mas de 40 clientes corporativos y liderazgo en soluciones IT integrales.' },
+    { anio: '2011-2026', texto: 'Más de 40 clientes corporativos y liderazgo en soluciones IT integrales.' },
   ];
 
   return (
@@ -70,7 +70,7 @@ export function Nosotros() {
         <div className="relative z-10 mx-auto max-w-[1280px] px-4 text-center sm:px-6 lg:px-8">
           <h1 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl">INCOMSAT</h1>
           <p className="mx-auto max-w-3xl text-lg text-gray-200 sm:text-xl">
-            Desde 1999, transformando la infraestructura tecnologica de empresas y corporaciones en Ecuador.
+            Desde 1999, transformando la infraestructura tecnológica de empresas y corporaciones en Ecuador.
           </p>
         </div>
       </section>
@@ -81,9 +81,9 @@ export function Nosotros() {
             <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-900 to-cyan-600">
               <Target className="h-8 w-8 text-white" />
             </div>
-            <h2 className="mb-6 text-2xl font-bold text-gray-900 sm:text-3xl">Mision</h2>
+            <h2 className="mb-6 text-2xl font-bold text-gray-900 sm:text-3xl">Misión</h2>
             <p className="text-base leading-relaxed text-gray-700 sm:text-lg">
-              Brindar soluciones integrales en tecnologia de la informacion para impulsar la transformacion digital con innovacion, confianza y sostenibilidad.
+              Brindar soluciones integrales en tecnología de la información para impulsar la transformación digital con innovación, confianza y sostenibilidad.
             </p>
           </Card>
 
@@ -91,9 +91,9 @@ export function Nosotros() {
             <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-cyan-600 to-blue-500">
               <Eye className="h-8 w-8 text-white" />
             </div>
-            <h2 className="mb-6 text-2xl font-bold text-gray-900 sm:text-3xl">Vision</h2>
+            <h2 className="mb-6 text-2xl font-bold text-gray-900 sm:text-3xl">Visión</h2>
             <p className="text-base leading-relaxed text-gray-700 sm:text-lg">
-              Ser el socio estrategico lider en soluciones IT, reconocido por excelencia operativa y compromiso con un futuro digital sostenible.
+              Ser el socio estratégico líder en soluciones IT, reconocido por excelencia operativa y compromiso con un futuro digital sostenible.
             </p>
           </Card>
         </div>
@@ -102,8 +102,8 @@ export function Nosotros() {
       <section className="bg-white py-24">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">Que nos diferencia</h2>
-            <p className="text-lg text-gray-600 sm:text-xl">Atributos que nos convierten en su mejor aliado tecnologico.</p>
+            <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">Qué nos diferencia</h2>
+            <p className="text-lg text-gray-600 sm:text-xl">Atributos que nos convierten en su mejor aliado tecnológico.</p>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -131,7 +131,7 @@ export function Nosotros() {
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">Nuestros valores</h2>
-            <p className="text-lg text-gray-600 sm:text-xl">Principios que guian cada proyecto.</p>
+            <p className="text-lg text-gray-600 sm:text-xl">Principios que guían cada proyecto.</p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -189,13 +189,13 @@ export function Nosotros() {
 
       <section className="bg-gradient-to-r from-blue-900 to-cyan-600 py-20 text-white">
         <div className="mx-auto max-w-[1280px] px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="mb-4 text-2xl font-bold sm:text-3xl">Listo para iniciar su transformacion digital?</h2>
+          <h2 className="mb-4 text-2xl font-bold sm:text-3xl">¿Listo para iniciar su transformación digital?</h2>
           <p className="mb-8 text-lg text-gray-100 sm:text-xl">
-            Agende una reunion con nuestro equipo y descubra como impulsar su negocio.
+            Agende una reunión con nuestro equipo y descubra cómo impulsar su negocio.
           </p>
           <Link to="/contacto">
             <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-              Agendar una reunion
+              Agendar una reunión
             </Button>
           </Link>
         </div>

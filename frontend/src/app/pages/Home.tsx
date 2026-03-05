@@ -49,26 +49,26 @@ export function Home() {
   const servicios = [
     {
       icon: Network,
-      title: 'Conectividad en cobre y fibra optica',
-      description: 'Cableado estructurado, enlaces de fibra optica y conectividad empresarial de alto rendimiento.',
+      title: 'Conectividad en cobre y fibra óptica',
+      description: 'Cableado estructurado, enlaces de fibra óptica y conectividad empresarial de alto rendimiento.',
       link: '/soluciones',
     },
     {
       icon: Briefcase,
       title: 'Wifi empresarial',
-      description: 'Cobertura wifi corporativa, segmentacion segura y optimizacion de rendimiento inalambrico.',
+      description: 'Cobertura wifi corporativa, segmentación segura y optimización de rendimiento inalámbrico.',
       link: '/soluciones',
     },
     {
       icon: Zap,
-      title: 'Sistemas electricos para IT',
-      description: 'Proteccion y respaldo electrico para infraestructura IT y continuidad operativa.',
+      title: 'Sistemas eléctricos para IT',
+      description: 'Protección y respaldo eléctrico para infraestructura IT y continuidad operativa.',
       link: '/soluciones',
     },
     {
       icon: Shield,
       title: 'CCTV',
-      description: 'Videovigilancia, grabacion y monitoreo remoto para seguridad de instalaciones.',
+      description: 'Videovigilancia, grabación y monitoreo remoto para seguridad de instalaciones.',
       link: '/soluciones',
     },
     {
@@ -79,20 +79,20 @@ export function Home() {
     },
     {
       icon: Building2,
-      title: 'Iluminacion para oficinas modernas',
-      description: 'Soluciones LED y diseno luminico funcional para espacios corporativos actuales.',
+      title: 'Iluminación para oficinas modernas',
+      description: 'Soluciones LED y diseño lumínico funcional para espacios corporativos actuales.',
       link: '/soluciones',
     },
     {
       icon: Briefcase,
       title: 'CRM',
-      description: 'Implementacion de CRM para seguimiento de clientes y automatizacion comercial.',
+      description: 'Implementación de CRM para seguimiento de clientes y automatización comercial.',
       link: '/soluciones',
     },
     {
       icon: Headset,
       title: 'Soporte a hardware y software',
-      description: 'Soporte tecnico remoto y en sitio para equipos, plataformas y aplicaciones empresariales.',
+      description: 'Soporte técnico remoto y en sitio para equipos, plataformas y aplicaciones empresariales.',
       link: '/soluciones',
     },
   ];
@@ -101,27 +101,27 @@ export function Home() {
     {
       icon: Award,
       title: 'Experiencia comprobada',
-      description: '25 años brindando soluciones IT a empresas lideres en Ecuador',
+      description: '25 años brindando soluciones IT a empresas líderes en Ecuador',
     },
     {
       icon: Building2,
       title: 'Soluciones integrales',
-      description: 'IT + electrico + seguridad + obra. Todo bajo una misma gestion',
+      description: 'IT + eléctrico + seguridad + obra. Todo bajo una misma gestión',
     },
     {
       icon: Users,
-      title: 'Implementacion y soporte',
-      description: 'Equipo especializado, atencion remota y presencial',
+      title: 'Implementación y soporte',
+      description: 'Equipo especializado, atención remota y presencial',
     },
     {
       icon: CheckCircle2,
-      title: 'Alianzas estrategicas',
-      description: 'Distribuidores certificados de las marcas tecnologicas lideres',
+      title: 'Alianzas estratégicas',
+      description: 'Distribuidores certificados de las marcas tecnológicas líderes',
     },
     {
       icon: TrendingUp,
       title: 'Enfoque en continuidad',
-      description: 'Disenamos pensando en seguridad, escalabilidad y operacion 24/7',
+      description: 'Diseñamos pensando en seguridad, escalabilidad y operación 24/7',
     },
   ];
 
@@ -170,12 +170,12 @@ export function Home() {
             </span>
           </h1>
           <p className="mx-auto mb-8 max-w-3xl text-base leading-relaxed text-gray-200 sm:text-xl">
-            Impulsamos centros de datos, infraestructura IT, digitalizacion y automatizacion para operar con seguridad, continuidad y escalabilidad.
+            Impulsamos centros de datos, infraestructura IT, digitalización y automatización para operar con seguridad, continuidad y escalabilidad.
           </p>
           <div className="flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <Link to="/contacto" className="w-full sm:w-auto">
               <Button size="lg" className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-5 text-base hover:from-cyan-600 hover:to-blue-700 sm:w-auto sm:px-8 sm:py-6 sm:text-lg">
-                Solicitar diagnostico
+                Solicitar diagnóstico
               </Button>
             </Link>
             <Link to="/soluciones" className="w-full sm:w-auto">
@@ -190,8 +190,8 @@ export function Home() {
       <motion.section {...fadeUp} className="py-24 bg-white">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Que hacemos</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Soluciones tecnologicas integrales para impulsar su negocio</p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Qué hacemos</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Soluciones tecnológicas integrales para impulsar su negocio</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -220,8 +220,8 @@ export function Home() {
       <motion.section {...fadeUp} className="py-24 bg-white">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Por que INCOMSAT</h2>
-            <p className="text-xl text-gray-600">Su socio estrategico en transformacion digital</p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Por qué INCOMSAT</h2>
+            <p className="text-xl text-gray-600">Su socio estratégico en transformación digital</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -253,8 +253,8 @@ export function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/85 via-blue-900/80 to-cyan-900/75" />
         <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Casos de Exito</h2>
-            <p className="text-xl text-gray-200">Mas de 40 empresas lideres confian en INCOMSAT</p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Casos de Éxito</h2>
+            <p className="text-xl text-gray-200">Más de 40 empresas líderes confían en INCOMSAT</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
@@ -271,7 +271,7 @@ export function Home() {
           <div className="text-center">
             <Link to="/casos-exito">
               <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
-                Ver casos de exito
+                Ver casos de Éxito
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
@@ -283,7 +283,7 @@ export function Home() {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Empresas con las que trabajamos</h2>
-            <p className="text-xl text-gray-600">Aliados estrategicos con las mejores marcas tecnologicas</p>
+            <p className="text-xl text-gray-600">Aliados estratégicos con las mejores marcas tecnológicas</p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
@@ -304,11 +304,11 @@ export function Home() {
 
       <motion.section {...fadeUp} className="py-20 bg-gradient-to-r from-blue-900 to-cyan-600 text-white">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Listo para transformar su infraestructura IT?</h2>
-          <p className="text-xl text-gray-100 mb-8">Solicite un diagnostico gratuito y descubra como podemos impulsar su negocio</p>
+          <h2 className="text-3xl font-bold mb-4">¿Listo para transformar su infraestructura IT?</h2>
+          <p className="text-xl text-gray-100 mb-8">Solicite un diagnóstico gratuito y descubra cómo podemos impulsar su negocio</p>
           <Link to="/contacto" className="w-full sm:w-auto">
             <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-              Solicitar diagnostico gratuito
+              Solicitar diagnóstico gratuito
             </Button>
           </Link>
         </div>
